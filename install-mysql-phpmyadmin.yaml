@@ -1,0 +1,14 @@
+- name: Install MySQL and Phpmyadmin
+  gather_facts: No
+  any_errors_fatal: true
+  hosts: servers
+  become: true
+  tasks:
+ 
+    - name: Launch mysql docker container
+      ansible.builtin.shell:
+        cmd: docker run --name=mk-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql/mysql-server:8.0.20
+
+    - name: Launch phpymadmin docker container
+      ansible.builtin.shell:
+        cmd: docker run --name mk-phpmyadmin --link mk-mysql:db -p 82:80 -d phpmyadmin/phpmyadmin
