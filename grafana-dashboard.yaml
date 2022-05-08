@@ -16,6 +16,6 @@
         state: present
         commit_message: Updated by ansible
         overwrite: yes
-        path: "/home/ubuntu/grafana-dashboard-crytek-cpu-ram-hdd-rootfs-1651923193216.json"
+        path: "/home/ubuntu/grafana-dashboard-crytek-cpu-ram-hdd-rootfs-new-34.json"
 
         
