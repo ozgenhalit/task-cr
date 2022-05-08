@@ -2,7 +2,7 @@
   tasks:
     - name: Import Grafana Dashboard
       community.grafana.grafana_dashboard:
-        grafana_url: http://54.235.60.166:3000
+        grafana_url: http://54.227.111.29:3000
         grafana_api_key: "eyJrIjoiV1Z0NGFWM3BCcU5aWXBmaWNpa2E4Mm05SVZVMVlSeUYiLCJuIjoiYWRtaW4iLCJpZCI6MX0="
         state: present
         commit_message: Updated by ansible
@@ -11,7 +11,7 @@
 
     - name: Import Grafana Dashboard on another instance
       community.grafana.grafana_dashboard:
-        grafana_url: http://34.229.88.65:3000/
+        grafana_url: http://34.230.77.252:3000/
         grafana_api_key: "eyJrIjoidTlKZVpDWW53MmF4N3BzclJsQzdIRFJGWjVuN3NSdkkiLCJuIjoiYWRtaW4iLCJpZCI6MX0="
         state: present
         commit_message: Updated by ansible
