@@ -36,7 +36,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "gridPos": {
         "h": 1,
@@ -52,7 +52,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Total number of CPU cores",
       "fieldConfig": {
@@ -129,7 +129,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Busy state of all CPU cores together",
       "fieldConfig": {
@@ -231,7 +231,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Total RootFS",
       "fieldConfig": {
@@ -313,7 +313,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Used Root File System",
       "fieldConfig": {
@@ -394,7 +394,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Total RAM",
       "fieldConfig": {
@@ -470,7 +470,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Non Available Random Access Memory",
       "fieldConfig": {
@@ -556,7 +556,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Total HDD Usage",
       "fieldConfig": {
@@ -611,11 +611,11 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "bv6jJAl7k"
+            "uid": "2AEHdal7z"
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "100.0 - 100 * (node_filesystem_avail_bytes{instance=~'$node',device !~'tmpfs',device!~'by-uuid'} / node_filesystem_size_bytes{instance=~'$node',device !~'tmpfs',device!~'by-uuid'}) or 100.0 - 100 * (node_filesystem_avail{instance=~'$node',device !~'tmpfs',device!~'by-uuid'} / node_filesystem_size{instance=~'$node',device !~'tmpfs',device!~'by-uuid'})",
+          "expr": "(node_filesystem_avail_bytes{instance=~'$node',device !~'tmpfs',device!~'by-uuid'} / node_filesystem_size_bytes{instance=~'$node',device !~'tmpfs',device!~'by-uuid'})",
           "format": "table",
           "instant": false,
           "interval": "",
@@ -630,7 +630,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "bv6jJAl7k"
+        "uid": "2AEHdal7z"
       },
       "description": "Total storage of HDD volume",
       "fieldConfig": {
@@ -676,7 +676,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "bv6jJAl7k"
+            "uid": "2AEHdal7z"
           },
           "editorMode": "code",
           "expr": "node_filesystem_avail_bytes{instance=~'$node',device !~'tmpfs',device!~'by-uuid'}",
@@ -722,7 +722,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "bv6jJAl7k"
+          "uid": "2AEHdal7z"
         },
         "definition": "",
         "hide": 0,
@@ -752,7 +752,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "bv6jJAl7k"
+          "uid": "2AEHdal7z"
         },
         "definition": "label_values(node_uname_info{job=\"$job\"}, instance)",
         "hide": 0,
